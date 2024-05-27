@@ -1,7 +1,7 @@
 const axios = require('axios');
 const MockAdapter = require('axios-mock-adapter');
 const { APP_API_CASH_IN, APP_API_CASH_OUT_IND, APP_API_CASH_OUT_LEGAL } = require('../constantsCIOCalc/apiPaths');
-const { fetchCashInConfig, fetchCashOutNaturalConfig, fetchCashOutLegalConfig } = require('./config');
+const { fetchCashInConfig, fetchCashOutIndConfig, fetchCashOutLegalConfig } = require('./config');
 
 describe('API Config Service', () => {
   let mock;
@@ -30,7 +30,7 @@ describe('API Config Service', () => {
       week_limit: { amount: 1000, currency: 'EUR' },
     };
     mock.onGet(APP_API_CASH_OUT_IND).reply(200, cashOutNaturalConfig);
-    const config = await fetchCashOutNaturalConfig();
+    const config = await fetchCashOutIndConfig();
     expect(config).toEqual(cashOutNaturalConfig);
   });
 

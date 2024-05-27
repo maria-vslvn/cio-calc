@@ -20,7 +20,7 @@ const fetchCashInConfig = function fetchCashInConfig() {
   return fetchConfig(APP_API_CASH_IN);
 };
 
-const fetchCashOutNaturalConfig = function fetchCashOutNaturalConfig() {
+const fetchCashOutIndConfig = function fetchCashOutIndConfig() {
   return fetchConfig(APP_API_CASH_OUT_IND);
 };
 
@@ -30,6 +30,6 @@ const fetchCashOutLegalConfig = function fetchCashOutLegalConfig() {
 
 module.exports = {
   fetchCashInConfig,
-  fetchCashOutNaturalConfig,
+  fetchCashOutIndConfig,
   fetchCashOutLegalConfig,
 };
